@@ -471,8 +471,8 @@ const translation = {
   about: {
     changeLog: 'Änderungsprotokoll',
     updateNow: 'Jetzt aktualisieren',
-    nowAvailable: 'Dify {{version}} ist jetzt verfügbar.',
-    latestAvailable: 'Dify {{version}} ist die neueste verfügbare Version.',
+    nowAvailable: 'Ghost flower {{version}} ist jetzt verfügbar.',
+    latestAvailable: 'Ghost flower {{version}} ist die neueste verfügbare Version.',
   },
   appMenus: {
     overview: 'Übersicht',
