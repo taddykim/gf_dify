@@ -414,11 +414,11 @@ x-shared-env: &shared-api-worker-env
 services:
   # API service
   api:
-    image: langgenius/dify-api:1.0.0
+    image: langgenius/dify-api:0.15.3
     restart: always
-    build:
-      context: ../api/
-      dockerfile: ./Dockerfile
+    # build:
+    #   context: ../api/
+    #   dockerfile: ./Dockerfile
     environment:
       # Use the shared environment variables.
       <<: *shared-api-worker-env
@@ -442,8 +442,11 @@ services:
   # worker service
   # The Celery worker for processing the queue.
   worker:
-    image: langgenius/dify-api:1.0.0
+    image: langgenius/dify-api:0.15.3
     restart: always
+    # build:
+    #   context: ../api/
+    #   dockerfile: ./Dockerfile
     environment:
       # Use the shared environment variables.
       <<: *shared-api-worker-env
@@ -466,7 +469,7 @@ services:
 
   # Frontend web application.
   web:
-    image: langgenius/dify-web:1.0.0
+    image: langgenius/dify-web:0.15.3
     restart: always
     build:
       context: ../web/
